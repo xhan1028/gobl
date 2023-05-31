@@ -294,52 +294,6 @@ Transform:
   m_Father: {fileID: 1508598553}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &57677191
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 57677193}
-  - component: {fileID: 57677192}
-  m_Layer: 0
-  m_Name: GoblinChatingManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &57677192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 57677191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec33fb9d9e6cc7041bb3d977d4b74f2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ChatText: {fileID: 734168800}
-  ChatName: {fileID: 163348666}
---- !u!4 &57677193
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 57677191}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 815.1281, y: 469.51645, z: 17.008614}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &93388738
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,7 +837,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uADF8\uB798.. \uBB34\uC2A8\uAC8C\uC784\uC744 \uD558\uB7EC \uC654\uB2E4\uACE0?"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fd4b7a624873b794880e462fc71489e1, type: 2}
   m_sharedMaterial: {fileID: 1079483398028934254, guid: fd4b7a624873b794880e462fc71489e1, type: 2}
@@ -1343,10 +1297,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1210846779}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1b00ec25693cf346ad925ae96a40436, type: 3}
+  m_Script: {fileID: 11500000, guid: ec33fb9d9e6cc7041bb3d977d4b74f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChatControllerObj: {fileID: 57677191}
+  tx: {fileID: 734168800}
   ChatImg: {fileID: 16001389}
 --- !u!1 &1227945219
 GameObject:

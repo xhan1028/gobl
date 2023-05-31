@@ -5,31 +5,31 @@ using UnityEngine.UI;
 using TMPro;
 public class ChatController : MonoBehaviour
 {
-    public TextMeshProUGUI ChatText;
-    public TextMeshProUGUI ChatName;
-    private string writerText;
+    public TextMeshProUGUI tx;
+    private string g_text = "그래..무슨게임이 하고싶다고?";
 
-    IEnumerator NormalChat(string narrator, string narration)
+    public GameObject ChatImg;
+
+    private bool joonMoBabo = false;
+    private void Update()
     {
-        int a = 0;
-        ChatName.text = narrator;
-        writerText = "";
-
-        for (a = 0; a < narration.Length; a++)
+        if (Input.GetMouseButtonDown(0) && joonMoBabo == false)
         {
-            writerText += narration[a];
-            ChatText.text = writerText;
-            yield return null;
+            joonMoBabo = true;
+
+            ChatImg.SetActive(true);
+            StartCoroutine(_typing());
         }
         
     }
-    public IEnumerator TextPractice()
+    IEnumerator _typing()
     {
-        yield return StartCoroutine(NormalChat("고블린", "그래.. 무슨게임이 하고싶다고?"));
+        yield return new WaitForSeconds(0.1f);
+        for (int i = 0; i <= g_text.Length; i++)
+        {
+            tx.text = g_text.Substring(0, i);
+            yield return new WaitForSeconds(0.07f);
+        }
     }
 
-    private void Start()
-    {
-        StartCoroutine(TextPractice());
-    }
 }
