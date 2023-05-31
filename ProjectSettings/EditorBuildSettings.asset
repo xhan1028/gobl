@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/gcardex12.unity
     guid: 3a43c10c59025fa4ba9737fc41644c74
+  - enabled: 1
+    path: Assets/Scenes/Goblin_One.unity
+    guid: 5fd23f9f1ce255243b172fa80ebc12c2
   m_configObjects: {}
