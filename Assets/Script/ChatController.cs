@@ -6,7 +6,7 @@ using TMPro;
 public class ChatController : MonoBehaviour
 {
     public TextMeshProUGUI tx;
-    private string g_text = "±×·¡..¹«½¼°ÔÀÓÀÌ ÇÏ°í½Í´Ù°í?";
+    private string g_text = "ê·¸ë˜..ë¬´ìŠ¨ê²Œì„ì´ í•˜ê³ ì‹¶ë‹¤ê³ ?";
 
     public GameObject ChatImg;
 
