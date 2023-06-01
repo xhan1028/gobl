@@ -5,25 +5,50 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public float moveSpeed = 5f; // Movement speed of the character
+    Rigidbody2D rigid2D;
+    float jumpForce = 250.0f;
+    //float walkForce = 30.0f;
+    //float maxWalkSpeed = 200.0f;
+    public Vector2 Player;
 
-    private Rigidbody2D rb;
-
-    private void Start()
+    void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        this.rigid2D = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    void Update()
     {
-        // Read the horizontal and vertical input axis
-        float moveX = Input.GetAxis("Horizontal");
-        float moveY = Input.GetAxis("Vertical");
+        // 점프
+        if (Input.GetKeyDown(KeyCode.Space) && this.rigid2D.velocity.y == 0)
+        {
+            this.rigid2D.AddForce(transform.up * this.jumpForce);
+        }
 
-        // Calculate the movement vector
-        Vector2 movement = new Vector2(moveX, moveY) * moveSpeed;
+        Player = Vector2.zero;
 
-        // Apply the movement to the rigidbody
-        rb.velocity = movement;
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            Player.x += 0.034f;
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            Player.x -= 0.034f;
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            Player.y += 0.034f;
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            Player.y -= 0.034f;
+        }
+
+        transform.Translate(Player);
+
+        // 속도
+        float speedx = Mathf.Abs(this.rigid2D.velocity.x);
+
+        //transform.localScale = new Vector3(-1, 1, 1);
+       // transform.localScale = new Vector3(1, 1, 1);
     }
 }
